@@ -891,3 +891,71 @@ img {
         gap: 26px;
     }
 }
+/* زر القائمة: مخفي في الكمبيوتر */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 8px;
+    padding: 7px 12px;
+    font-size: 26px;
+    line-height: 1.2;
+    cursor: pointer;
+}
+
+/* إصلاح القائمة في الشاشات المتوسطة والصغيرة */
+@media (max-width: 900px) {
+    #main-header {
+        padding: 14px 16px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: space-between;
+    }
+
+    .logo {
+        min-width: 0;
+    }
+
+    .logo a {
+        font-size: clamp(17px, 4vw, 22px);
+    }
+
+    .menu-toggle {
+        display: block;
+        flex-shrink: 0;
+    }
+
+    .order-action {
+        display: none;
+    }
+
+    .navigation {
+        display: none;
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .navigation.is-open {
+        display: block;
+    }
+
+    .navigation ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+
+    .navigation ul li {
+        width: 100%;
+    }
+
+    .navigation ul li a {
+        display: block;
+        padding: 13px 8px;
+        font-size: 16px;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+}
