@@ -108,3 +108,20 @@ orderItemButtons.forEach(button => {
         
     });
 });
+
+const menuToggle = document.getElementById("menu-toggle");
+const navigation = document.getElementById("main-navigation");
+
+if (menuToggle && navigation) {
+    menuToggle.addEventListener("click", () => {
+        const isOpen = navigation.classList.toggle("is-open");
+
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "إغلاق القائمة" : "فتح القائمة"
+        );
+
+        menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+}
