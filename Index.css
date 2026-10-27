@@ -699,3 +699,195 @@ body {
         transform: translateY(0);
     }
 }
+
+
+/* ================================
+   MOBILE RESPONSIVE FIXES
+   ================================ */
+
+/* منع الصور والعناصر من تجاوز عرض الشاشة */
+html {
+    width: 100%;
+    overflow-x: clip;
+}
+
+body {
+    width: 100%;
+    min-width: 0;
+    overflow-wrap: break-word;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* منع الحاويات من فرض عرض كبير */
+.about-container,
+.contact-wrapper,
+.dishes-grid,
+.menu-items-grid,
+.features-grid,
+.testimonials-grid,
+.gallery-grid,
+.footer-container {
+    min-width: 0;
+}
+
+/* جعل الشبكات تتناسب مع عرض الشاشة */
+.dishes-grid,
+.menu-items-grid {
+    grid-template-columns:
+        repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+}
+
+.features-grid {
+    grid-template-columns:
+        repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+}
+
+.testimonials-grid {
+    grid-template-columns:
+        repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+}
+
+.gallery-grid {
+    grid-template-columns:
+        repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+}
+
+/* تحسين عرض الصورة والنص في قسم من نحن */
+.about-image,
+.about-content,
+.contact-info,
+.contact-form-container {
+    min-width: 0;
+}
+
+.about-image img {
+    max-width: 100%;
+}
+
+/* إصلاح أحجام النصوص والمسافات في الهاتف */
+@media (max-width: 768px) {
+
+    #about-us,
+    #popular-dishes,
+    #full-menu,
+    #why-choose-us,
+    #testimonials,
+    #gallery,
+    #faq,
+    #contact {
+        padding: 42px 16px;
+    }
+
+    #main-footer {
+        padding: 40px 16px 20px;
+    }
+
+    .section-header h2,
+    .menu-header h2,
+    .about-content h2,
+    .testimonials-header h2,
+    .gallery-header h2,
+    .faq-header h2,
+    .contact-header h2 {
+        font-size: clamp(24px, 6vw, 32px);
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+    }
+
+    .about-container,
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .about-image,
+    .about-content,
+    .contact-info,
+    .contact-form-container {
+        width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .about-image img {
+        height: auto;
+        max-height: 340px;
+        object-fit: cover;
+    }
+
+    .contact-form-container {
+        padding: 22px 16px;
+    }
+
+    .dish-info,
+    .item-info {
+        padding: 18px;
+    }
+
+    .dish-description,
+    .item-description {
+        height: auto;
+        min-height: 0;
+    }
+
+    .category-buttons {
+        gap: 10px;
+    }
+
+    .btn-category {
+        padding: 9px 15px;
+        max-width: 100%;
+    }
+
+    .gallery-item {
+        height: 220px;
+    }
+
+    .faq-question {
+        padding: 16px;
+        font-size: 16px;
+    }
+
+    .back-to-top-btn {
+        bottom: 18px;
+        left: 16px;
+    }
+}
+
+/* تحسين الشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+
+    .dishes-grid,
+    .menu-items-grid,
+    .features-grid,
+    .testimonials-grid,
+    .gallery-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .logo a {
+        font-size: 20px;
+    }
+
+    .dish-image img,
+    .item-image img {
+        height: 200px;
+    }
+
+    .item-footer {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .btn-order-item {
+        max-width: 100%;
+    }
+
+    .footer-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 26px;
+    }
+}
