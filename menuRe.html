@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="Index.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ==================== قسم المنيو الكامل (Menu Section) ==================== -->
+    <section id="full-menu">
+        
+        <!-- 1. عنوان القسم (Section title) -->
+        <div class="menu-header">
+            <span class="sub-title">تصفح قائمتنا</span>
+            <h2>اختر وجبتك المفضلة</h2>
+        </div>
+
+        <!-- 2. أزرار الفئات (Category buttons) -->
+        <!-- الملاحظة: هذه الأزرار نخدموها بـ <button> باش كي نبرمجوها بالـ JavaScript مبعد، يصرا تصفية (Filter) للأطباق -->
+        <div class="category-buttons">
+            <button class="btn-category active" data-filter="all">الكل</button>
+            <button class="btn-category" data-filter="pizza">بيتزا بحرية (Pizza)</button>
+            <button class="btn-category" data-filter="burgers">برغر بحري (Burgers)</button>
+            <button class="btn-category" data-filter="drinks">مشروبات (Drinks)</button>
+            <button class="btn-category" data-filter="desserts">تحلية (Desserts)</button>
+        </div>
+
+        <!-- 3. عناصر المنيو (Menu items) -->
+        <div class="menu-items-grid">
+            
+            <!-- وجبة 1: بيتزا بحرية -->
+            <article class="menu-item pizza">
+                <div class="item-image">
+                    <!-- رابط صورة بيتزا فواكه بحر مجانية وجاهزة للاستعمال -->
+                    <img src="https://unsplash.com" alt="بيتزا فواكه البحر الفاخرة">
+                </div>
+                <div class="item-info">
+                    <h3 class="item-name">بيتزا فواكه البحر (Frutti di Mare)</h3>
+                    <p class="item-description">عجينة إيطالية هشة مغطاة بصلصة الطماطم الطازجة، جبن الموزاريلا، الجمبري، الكالاماري، وبلح البحر مع رشة زعتر.</p>
+                    <div class="item-footer">
+                        <span class="item-price">1400 دج</span>
+                        <!-- زر الطلب (Order button) -->
+                        <button class="btn-order-item" data-dish="بيتزا فواكه البحر">اطلب الآن 🛒</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- وجبة 2: برغر بحري -->
+            <article class="menu-item burgers">
+                <div class="item-image">
+                    <!-- رابط صورة برغر سمك ومأكولات بحرية مجانية جاهزة -->
+                    <img src="https://unsplash.com" alt="برغر سمك مقرمش">
+                </div>
+                <div class="item-info">
+                    <h3 class="item-name">برغر السلمون المقرمش (Crispy Salmon Burger)</h3>
+                    <p class="item-description">شريحة من سمك السلمون المفروم والمقرمش، تُقدم في خبز البرغر الطازج مع سلطة الكرنب وصلصة التارتار الخاصة بنا.</p>
+                    <div class="item-footer">
+                        <span class="item-price">950 دج</span>
+                        <!-- زر الطلب (Order button) -->
+                        <button class="btn-order-item" data-dish="برغر السلمون المقرمش">اطلب الآن 🛒</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- وجبة 3: مشروبات -->
+            <article class="menu-item drinks">
+                <div class="item-image">
+                    <!-- رابط صورة عصير ليمون منعش مجانية جاهزة -->
+                    <img src="https://unsplash.com" alt="موخيتو الليمون والنعناع المنعش">
+                </div>
+                <div class="item-info">
+                    <h3 class="item-name">موخيتو بحري منعش (Blue Lagoon)</h3>
+                    <p class="item-description">مزيج ساحر ومنعش من الليمون الطازج، أوراق النعناع، الصودا، ونكهة التوت الأزرق التي تأخذك إلى أعماق البحر.</p>
+                    <div class="item-footer">
+                        <span class="item-price">350 دج</span>
+                        <!-- زر الطلب (Order button) -->
+                        <button class="btn-order-item" data-dish="موخيتو بحري منعش">اطلب الآن 🛒</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- وجبة 4: تحلية -->
+            <article class="menu-item desserts">
+                <div class="item-image">
+                    <!-- رابط صورة تارت الليمون مجانية جاهزة -->
+                    <img src="https://unsplash.com" alt="تارت الليمون المنعشة">
+                </div>
+                <div class="item-info">
+                    <h3 class="item-name">تارت الليمون والمورانغ (Lemon Meringue)</h3>
+                    <p class="item-description">عجينة تارت مقرمشة محشية بكريمة الليمون الحامضة والغنية، مغطاة بطبقة من المورانغ الفرنسي الخفيف والمحمر.</p>
+                    <div class="item-footer">
+                        <span class="item-price">400 دج</span>
+                        <!-- زر الطلب (Order button) -->
+                        <button class="btn-order-item" data-dish="تارت الليمون و المورانغ">اطلب الآن 🛒</button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+    <button id="back-to-top" class="back-to-top-btn">⬆️</button>
+    <script src="Index.js"></script>
+</body>
+</html>

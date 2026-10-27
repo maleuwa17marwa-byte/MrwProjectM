@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Index.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ==================== قسم الاتصال (Contact Section) ==================== -->
+    <section id="contact">
+        
+        <!-- عنوان القسم (Title) -->
+        <div class="contact-header">
+            <span class="sub-title">تواصل معنا</span>
+            <h2>يسعدنا دائماً استقبالكم وخدمتكم</h2>
+        </div>
+
+        <div class="contact-wrapper">
+            
+            <!-- معلومات الاتصال الأساسية -->
+            <div class="contact-info">
+                
+                <!-- الهاتف (Phone) -->
+                <div class="info-item">
+                    <span class="info-icon">📞</span>
+                    <h3>رقم الهاتف</h3>
+                    <p><a href="tel:+21321XXXXXX">021-XX-XX-XX</a></p>
+                    <p><a href="tel:+213550XXXXXX">0550-XX-XX-XX</a></p>
+                </div>
+
+                <!-- البريد الإلكتروني (Email) -->
+                <div class="info-item">
+                    <span class="info-icon">📧</span>
+                    <h3>البريد الإلكتروني</h3>
+                    <p><a href="mailto:info@safinat-albihar.com">info@safinat-albihar.com</a></p>
+                </div>
+
+                <!-- العنوان (Address) -->
+                <div class="info-item">
+                    <span class="info-icon">📍</span>
+                    <h3>العنوان</h3>
+                    <p>شارع واجهة البحر، الجزائر العاصمة</p>
+                </div>
+
+                <!-- أوقات العمل (Opening Hours) -->
+                <div class="info-item">
+                    <span class="info-icon">⏰</span>
+                    <h3>أوقات العمل</h3>
+                    <p>كل يوم: من 12:00 ظهراً إلى 11:00 ليلاً</p>
+                </div>
+
+            </div>
+
+            <!-- استمارة الاتصال (Contact Form) -->
+            <div class="contact-form-container">
+                <form class="contact-form">
+                    
+                    <!-- الاسم (Name) -->
+                    <div class="form-group">
+                        <label for="client-name">الاسم الكامل:</label>
+                        <input type="text" id="client-name" name="name" placeholder="اكتب اسمك هنا" required>
+                    </div>
+
+                    <!-- البريد الإلكتروني (Email) -->
+                    <div class="form-group">
+                        <label for="client-email">البريد الإلكتروني:</label>
+                        <input type="email" id="client-email" name="email" placeholder="name@example.com" required>
+                    </div>
+
+                    <!-- الرسالة (Message) -->
+                    <div class="form-group">
+                        <label for="client-message">الرسالة أو تفاصيل الطلب:</label>
+                        <textarea id="client-message" name="message" rows="5" placeholder="اكتب رسالتك أو نوع الطاولة والسمك الذي تريد حجزه..." required></textarea>
+                    </div>
+
+                    <!-- زر الإرسال (Send button) -->
+                    <button type="submit" class="btn-submit">إرسال الرسالة الآن ✨</button>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+     <script src="Index.js"></script>
+    <!-- زر العودة للأعلى السحري -->
+<button id="back-to-top" class="back-to-top-btn">⬆️</button>
+</body>
+</html>
